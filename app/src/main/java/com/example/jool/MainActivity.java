@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         mSensorListener = new ShakeEventListener();
 
-        mp = MediaPlayer.create(getApplicationContext(), R.raw.vape_trim_short);
+        mp = MediaPlayer.create(getApplicationContext(), R.raw.full_rip);
 
         toast("Shake to toggle Party Mode!", true);
 
@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
         jool.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                //toast("Long click activated");
                 Animation shake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
                 jool.startAnimation(shake);
                 mp.start();
